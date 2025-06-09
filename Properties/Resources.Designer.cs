@@ -63,6 +63,16 @@ namespace HoloSouls_PDKR_NSPD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap line_md_download {
+            get {
+                object obj = ResourceManager.GetObject("line-md_download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nasi_padangggg {
             get {
                 object obj = ResourceManager.GetObject("nasi padangggg", resourceCulture);
