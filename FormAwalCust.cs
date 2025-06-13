@@ -10,23 +10,25 @@ using System.Windows.Forms;
 
 namespace HoloSouls_PDKR_NSPD
 {
-    public partial class FormMainUser: Form
+    public partial class FormAwalCust : Form
     {
-        public FormMainUser()
+        public FormAwalCust()
         {
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-
+            Login lgn = new Login();
+            this.Hide();
+            lgn.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            FormStruk frmStruk = new FormStruk();
+            FormMainUser frmUser = new FormMainUser();
             this.Hide();
-            frmStruk.Show();
+            frmUser.Show();
         }
     }
 }

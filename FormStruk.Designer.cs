@@ -1,6 +1,6 @@
 ﻿namespace HoloSouls_PDKR_NSPD
 {
-    partial class Form_Struk
+    partial class FormStruk
     {
         /// <summary>
         /// Required designer variable.

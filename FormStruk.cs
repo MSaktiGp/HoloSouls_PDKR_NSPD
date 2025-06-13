@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HoloSouls_PDKR_NSPD
 {
-    public partial class Form_Logout_dan_Pesan : Form
+    public partial class FormStruk : Form
     {
-        public Form_Logout_dan_Pesan()
+        public FormStruk()
         {
             InitializeComponent();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
