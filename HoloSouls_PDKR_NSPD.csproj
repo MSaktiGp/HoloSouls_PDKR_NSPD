@@ -40,7 +40,14 @@
       <HintPath>packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +60,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConfig.cs" />
+    <Compile Include="Form Logout dan Pesan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Logout dan Pesan.Designer.cs">
+      <DependentUpon>Form Logout dan Pesan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Struk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Struk.Designer.cs">
+      <DependentUpon>Form Struk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainAdmin.Designer.cs">
+      <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainUser.Designer.cs">
+      <DependentUpon>FormMainUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +92,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form Logout dan Pesan.resx">
+      <DependentUpon>Form Logout dan Pesan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Struk.resx">
+      <DependentUpon>Form Struk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainAdmin.resx">
+      <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainUser.resx">
+      <DependentUpon>FormMainUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +137,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\line-md_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesannn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loginnn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loginnnnnn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wp logn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MENU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg admin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
