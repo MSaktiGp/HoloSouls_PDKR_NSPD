@@ -31,5 +31,10 @@ namespace HoloSouls_PDKR_NSPD
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
