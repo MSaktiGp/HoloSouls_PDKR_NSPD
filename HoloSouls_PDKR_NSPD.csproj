@@ -60,6 +60,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConfig.cs" />
+    <Compile Include="Form Logout dan Pesan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Logout dan Pesan.Designer.cs">
+      <DependentUpon>Form Logout dan Pesan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Struk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Struk.Designer.cs">
+      <DependentUpon>Form Struk.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form Logout dan Pesan.resx">
+      <DependentUpon>Form Logout dan Pesan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Struk.resx">
+      <DependentUpon>Form Struk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainUser.resx">
       <DependentUpon>FormMainUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +133,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\line-md_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesannn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loginnn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loginnnnnn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wp logn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MENU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 41.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

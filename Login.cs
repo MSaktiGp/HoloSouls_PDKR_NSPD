@@ -86,5 +86,10 @@ namespace HoloSouls_PDKR_NSPD
                 }
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

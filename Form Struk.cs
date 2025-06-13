@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HoloSouls_PDKR_NSPD
 {
-    public partial class FormMainUser: Form
+    public partial class Form_Struk : Form
     {
-        public FormMainUser()
+        public Form_Struk()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
