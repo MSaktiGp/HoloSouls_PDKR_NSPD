@@ -22,6 +22,7 @@ namespace HoloSouls_PDKR_NSPD
 
         }
 
+<<<<<<< HEAD
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -40,6 +41,13 @@ namespace HoloSouls_PDKR_NSPD
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+=======
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormStruk frmStruk = new FormStruk();
+            this.Hide();
+            frmStruk.Show();
+>>>>>>> 514524f9ab988e9e80a3a7c412a3e9c943acf539
         }
     }
 }

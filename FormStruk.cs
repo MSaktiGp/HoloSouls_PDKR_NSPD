@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HoloSouls_PDKR_NSPD
 {
-    public partial class Form_Struk : Form
+    public partial class FormStruk : Form
     {
-        public Form_Struk()
+        public FormStruk()
         {
             InitializeComponent();
         }

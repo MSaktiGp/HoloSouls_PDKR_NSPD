@@ -1,6 +1,6 @@
 ﻿namespace HoloSouls_PDKR_NSPD
 {
-    partial class Form_Logout_dan_Pesan
+    partial class FormAwalCust
     {
         /// <summary>
         /// Required designer variable.
@@ -39,21 +39,24 @@
             this.button6.BackColor = System.Drawing.Color.RoyalBlue;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(152, 112);
+            this.button6.Location = new System.Drawing.Point(203, 138);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(208, 33);
+            this.button6.Size = new System.Drawing.Size(277, 41);
             this.button6.TabIndex = 20;
             this.button6.Text = "Pesan";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(152, 165);
+            this.button5.Location = new System.Drawing.Point(203, 203);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(208, 33);
+            this.button5.Size = new System.Drawing.Size(277, 41);
             this.button5.TabIndex = 21;
             this.button5.Text = "LOG OUT";
             this.button5.UseVisualStyleBackColor = false;
@@ -63,22 +66,24 @@
             // 
             this.pictureBox1.Image = global::HoloSouls_PDKR_NSPD.Properties.Resources.Loginnn;
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(529, 27);
+            this.pictureBox1.Size = new System.Drawing.Size(705, 33);
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
-            // Form_Logout_dan_Pesan
+            // FormAwalCust
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::HoloSouls_PDKR_NSPD.Properties.Resources.User;
-            this.ClientSize = new System.Drawing.Size(525, 279);
+            this.ClientSize = new System.Drawing.Size(700, 343);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
-            this.Name = "Form_Logout_dan_Pesan";
-            this.Text = "Form_Logout_dan_Pesan";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FormAwalCust";
+            this.Text = "Selamat Datang!";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

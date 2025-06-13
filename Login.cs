@@ -67,11 +67,11 @@ namespace HoloSouls_PDKR_NSPD
                             }
                             else if (role == "user")
                             {
-                                FormMainUser frmUser = new FormMainUser();
+                                FormAwalCust frmAwal = new FormAwalCust();
                                 this.Hide();
-                                frmUser.Show();
+                                frmAwal.Show();
                             }
-
+                            
                         }
                         else
                         {
