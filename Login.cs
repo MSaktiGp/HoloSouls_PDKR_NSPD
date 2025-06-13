@@ -21,5 +21,10 @@ namespace HoloSouls_PDKR_NSPD
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
