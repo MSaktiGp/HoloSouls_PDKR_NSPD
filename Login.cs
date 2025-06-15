@@ -24,6 +24,9 @@ namespace HoloSouls_PDKR_NSPD
 
         }
 
+<<<<<<< HEAD
+        private void textBox3_TextChanged(object sender, EventArgs e)
+=======
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
@@ -64,11 +67,11 @@ namespace HoloSouls_PDKR_NSPD
                             }
                             else if (role == "user")
                             {
-                                FormMainUser frmUser = new FormMainUser();
+                                FormAwalCust frmAwal = new FormAwalCust();
                                 this.Hide();
-                                frmUser.Show();
+                                frmAwal.Show();
                             }
-
+                            
                         }
                         else
                         {
@@ -85,6 +88,12 @@ namespace HoloSouls_PDKR_NSPD
                     MessageBox.Show("Terjadi kesalahan koneksi:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+>>>>>>> 18642241105aed445cedc81a0fb69c01e7f8785a
+        {
+
         }
     }
 }

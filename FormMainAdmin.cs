@@ -16,5 +16,25 @@ namespace HoloSouls_PDKR_NSPD
         {
             InitializeComponent();
         }
+
+        private void btnPenjualan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
