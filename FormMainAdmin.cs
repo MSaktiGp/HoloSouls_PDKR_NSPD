@@ -24,12 +24,16 @@ namespace HoloSouls_PDKR_NSPD
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-
+            FormAdminMenu frmMenu = new FormAdminMenu();
+            this.Hide();
+            frmMenu.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            Login lgn = new Login();
+            this.Hide();
+            lgn.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
