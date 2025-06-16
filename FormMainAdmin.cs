@@ -19,7 +19,9 @@ namespace HoloSouls_PDKR_NSPD
 
         private void btnPenjualan_Click(object sender, EventArgs e)
         {
-
+            FormPenjualanAdmin frmPenjualan = new FormPenjualanAdmin();
+            this.Hide();
+            frmPenjualan.Show();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
