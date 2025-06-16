@@ -29,20 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtTambahan = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnReload = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button6 = new System.Windows.Forms.Button();
+            this.numMenu = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,28 +47,23 @@
             this.refreshTimer1 = new System.Windows.Forms.Timer(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbFilterBy = new System.Windows.Forms.ComboBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnCari = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cmbFilterBy = new System.Windows.Forms.ComboBox();
+            this.txtMenu = new System.Windows.Forms.TextBox();
+            this.btnTambah = new System.Windows.Forms.Button();
+            this.dgvPesanan = new System.Windows.Forms.DataGridView();
+            this.lblTotalItem = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblTotalHarga = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnBayar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenuCust)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPesanan)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 58);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 57;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 150);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -82,24 +73,9 @@
             this.label1.Location = new System.Drawing.Point(45, 219);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 20);
+            this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Lauk Utama:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Ayam",
-            "Ikan"});
-            this.comboBox1.Location = new System.Drawing.Point(49, 239);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(423, 24);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.label1.Text = "Menu:";
             // 
             // label2
             // 
@@ -122,65 +98,53 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Jumlah:";
             // 
-            // textBox1
+            // txtTambahan
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(51, 380);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(423, 22);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtTambahan.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtTambahan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTambahan.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTambahan.Location = new System.Drawing.Point(51, 380);
+            this.txtTambahan.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTambahan.Name = "txtTambahan";
+            this.txtTambahan.Size = new System.Drawing.Size(423, 22);
+            this.txtTambahan.TabIndex = 9;
+            this.txtTambahan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // btnEdit
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(49, 430);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Tambah";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEdit.Location = new System.Drawing.Point(157, 430);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(100, 28);
+            this.btnEdit.TabIndex = 13;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnHapus
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(157, 430);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnHapus.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnHapus.Location = new System.Drawing.Point(265, 430);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(100, 28);
+            this.btnHapus.TabIndex = 14;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnReload
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(265, 430);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Hapus";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.ForeColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(375, 430);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 28);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Reload";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnReload.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnReload.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnReload.Location = new System.Drawing.Point(375, 430);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(100, 28);
+            this.btnReload.TabIndex = 15;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -209,28 +173,15 @@
             this.label5.Text = "Catatan tambahan\r\n";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // numericUpDown1
+            // numMenu
             // 
-            this.numericUpDown1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.numericUpDown1.Location = new System.Drawing.Point(51, 300);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(424, 22);
-            this.numericUpDown1.TabIndex = 18;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(793, 476);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(277, 28);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Bayar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.numMenu.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.numMenu.Location = new System.Drawing.Point(51, 300);
+            this.numMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.numMenu.Name = "numMenu";
+            this.numMenu.Size = new System.Drawing.Size(338, 22);
+            this.numMenu.TabIndex = 18;
+            this.numMenu.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label3
             // 
@@ -323,6 +274,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
+            // btnCari
+            // 
+            this.btnCari.Location = new System.Drawing.Point(12, 83);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.Size = new System.Drawing.Size(330, 38);
+            this.btnCari.TabIndex = 2;
+            this.btnCari.Text = "Cari";
+            this.btnCari.UseVisualStyleBackColor = true;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(139, 33);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(203, 25);
+            this.txtSearch.TabIndex = 1;
+            // 
             // cmbFilterBy
             // 
             this.cmbFilterBy.FormattingEnabled = true;
@@ -337,22 +305,85 @@
             this.cmbFilterBy.Size = new System.Drawing.Size(121, 26);
             this.cmbFilterBy.TabIndex = 0;
             // 
-            // txtSearch
+            // txtMenu
             // 
-            this.txtSearch.Location = new System.Drawing.Point(139, 33);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(203, 25);
-            this.txtSearch.TabIndex = 1;
+            this.txtMenu.Location = new System.Drawing.Point(49, 242);
+            this.txtMenu.Name = "txtMenu";
+            this.txtMenu.Size = new System.Drawing.Size(340, 22);
+            this.txtMenu.TabIndex = 27;
             // 
-            // btnCari
+            // btnTambah
             // 
-            this.btnCari.Location = new System.Drawing.Point(12, 83);
-            this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(330, 38);
-            this.btnCari.TabIndex = 2;
-            this.btnCari.Text = "Cari";
-            this.btnCari.UseVisualStyleBackColor = true;
-            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            this.btnTambah.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTambah.Location = new System.Drawing.Point(49, 430);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(100, 28);
+            this.btnTambah.TabIndex = 28;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
+            // 
+            // dgvPesanan
+            // 
+            this.dgvPesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPesanan.Location = new System.Drawing.Point(47, 66);
+            this.dgvPesanan.Name = "dgvPesanan";
+            this.dgvPesanan.RowHeadersWidth = 57;
+            this.dgvPesanan.RowTemplate.Height = 24;
+            this.dgvPesanan.Size = new System.Drawing.Size(400, 150);
+            this.dgvPesanan.TabIndex = 29;
+            // 
+            // lblTotalItem
+            // 
+            this.lblTotalItem.AutoSize = true;
+            this.lblTotalItem.Location = new System.Drawing.Point(557, 403);
+            this.lblTotalItem.Name = "lblTotalItem";
+            this.lblTotalItem.Size = new System.Drawing.Size(14, 16);
+            this.lblTotalItem.TabIndex = 30;
+            this.lblTotalItem.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(645, 430);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(14, 16);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "0";
+            // 
+            // lblTotalHarga
+            // 
+            this.lblTotalHarga.AutoSize = true;
+            this.lblTotalHarga.Location = new System.Drawing.Point(557, 430);
+            this.lblTotalHarga.Name = "lblTotalHarga";
+            this.lblTotalHarga.Size = new System.Drawing.Size(79, 16);
+            this.lblTotalHarga.TabIndex = 33;
+            this.lblTotalHarga.Text = "Total Harga";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(59, 245);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(151, 16);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Pilih menu di tabel menu";
+            // 
+            // btnBayar
+            // 
+            this.btnBayar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBayar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBayar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBayar.Location = new System.Drawing.Point(767, 476);
+            this.btnBayar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBayar.Name = "btnBayar";
+            this.btnBayar.Size = new System.Drawing.Size(277, 28);
+            this.btnBayar.TabIndex = 35;
+            this.btnBayar.Text = "Bayar";
+            this.btnBayar.UseVisualStyleBackColor = false;
+            this.btnBayar.Click += new System.EventHandler(this.btnBayar_Click);
             // 
             // FormMainUser
             // 
@@ -360,6 +391,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::HoloSouls_PDKR_NSPD.Properties.Resources.Frame_41;
             this.ClientSize = new System.Drawing.Size(1083, 524);
+            this.Controls.Add(this.btnBayar);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblTotalHarga);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblTotalItem);
+            this.Controls.Add(this.dgvPesanan);
+            this.Controls.Add(this.btnTambah);
+            this.Controls.Add(this.txtMenu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnKembali);
@@ -367,52 +406,43 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numMenu);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnReload);
+            this.Controls.Add(this.btnHapus);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.txtTambahan);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMainUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMainUser";
             this.Load += new System.EventHandler(this.FormMainUser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenuCust)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPesanan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtTambahan;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.NumericUpDown numMenu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
@@ -424,5 +454,13 @@
         private System.Windows.Forms.Button btnCari;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox cmbFilterBy;
+        private System.Windows.Forms.TextBox txtMenu;
+        private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.DataGridView dgvPesanan;
+        private System.Windows.Forms.Label lblTotalItem;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTotalHarga;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnBayar;
     }
 }

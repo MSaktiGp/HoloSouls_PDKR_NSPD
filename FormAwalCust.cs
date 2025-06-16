@@ -12,9 +12,11 @@ namespace HoloSouls_PDKR_NSPD
 {
     public partial class FormAwalCust : Form
     {
-        public FormAwalCust()
+        private int id_user;
+        public FormAwalCust(int userId)
         {
             InitializeComponent();
+            id_user = userId;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -26,9 +28,9 @@ namespace HoloSouls_PDKR_NSPD
 
         private void button6_Click(object sender, EventArgs e)
         {
-            FormMainUser frmUser = new FormMainUser();
+            FormMainUser frmMain = new FormMainUser(id_user); // ✅ kirim id_user ke FormMainUser
+            frmMain.Show();
             this.Hide();
-            frmUser.Show();
         }
     }
 }

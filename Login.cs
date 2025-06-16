@@ -44,7 +44,7 @@ namespace HoloSouls_PDKR_NSPD
                 try
                 {
                     conn.Open();
-                    string query = "SELECT password, role FROM users WHERE username = @username";
+                    string query = "SELECT id_user, password, role FROM users WHERE username = @username";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", username);
 
@@ -52,8 +52,10 @@ namespace HoloSouls_PDKR_NSPD
 
                     if (reader.Read())
                     {
-                        string hashFromDb = reader.GetString("Password");
+                        int id_user = Convert.ToInt32(reader["id_user"]); // ✅ ambil id_user dari DB
+                        string hashFromDb = reader.GetString("password");
                         string role = reader.GetString("role");
+
                         bool isValid = BCrypt.Net.BCrypt.Verify(password, hashFromDb);
 
                         if (isValid)
@@ -68,11 +70,10 @@ namespace HoloSouls_PDKR_NSPD
                             }
                             else if (role == "user")
                             {
-                                FormAwalCust frmAwal = new FormAwalCust();
+                                FormAwalCust frmAwal = new FormAwalCust(id_user); // ✅ kirim id_user
                                 this.Hide();
                                 frmAwal.Show();
                             }
-                            
                         }
                         else
                         {
