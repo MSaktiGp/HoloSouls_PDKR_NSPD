@@ -59,7 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\MenuRepository.cs" />
     <Compile Include="DBConfig.cs" />
     <Compile Include="FormPenjualanAdmin.cs">
       <SubType>Form</SubType>
@@ -103,7 +102,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\MenuModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAwalCust.resx">
