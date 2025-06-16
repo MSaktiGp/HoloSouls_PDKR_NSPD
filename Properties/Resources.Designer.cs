@@ -63,6 +63,46 @@ namespace HoloSouls_PDKR_NSPD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg__2_ {
+            get {
+                object obj = ResourceManager.GetObject("bg (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("bg (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg__2_2 {
+            get {
+                object obj = ResourceManager.GetObject("bg (2)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg__2_3 {
+            get {
+                object obj = ResourceManager.GetObject("bg (2)3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg_admin {
             get {
                 object obj = ResourceManager.GetObject("bg admin", resourceCulture);
@@ -116,16 +156,6 @@ namespace HoloSouls_PDKR_NSPD.Properties {
         internal static System.Drawing.Bitmap Loginnnnnn {
             get {
                 object obj = ResourceManager.GetObject("Loginnnnnn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MENU {
-            get {
-                object obj = ResourceManager.GetObject("MENU", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

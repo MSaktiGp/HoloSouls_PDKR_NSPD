@@ -60,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConfig.cs" />
+    <Compile Include="FormPenjualanAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPenjualanAdmin.Designer.cs">
+      <DependentUpon>FormPenjualanAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAwalCust.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <EmbeddedResource Include="FormAwalCust.resx">
       <DependentUpon>FormAwalCust.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPenjualanAdmin.resx">
+      <DependentUpon>FormPenjualanAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormStruk.resx">
       <DependentUpon>FormStruk.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,19 +128,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -163,9 +172,6 @@
     <None Include="Resources\Wp logn.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MENU.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Frame 4.png" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +179,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg %282%293.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
