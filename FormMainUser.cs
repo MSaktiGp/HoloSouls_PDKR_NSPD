@@ -131,5 +131,46 @@ namespace HoloSouls_PDKR_NSPD
                 return Convert.ToInt32(cmd.ExecuteScalar());
             }
         }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            TampilkanDataFiltered();
+        }
+
+        private void TampilkanDataFiltered()
+        {
+            string kategori = cmbFilterBy.SelectedItem?.ToString(); // ComboBox: Ayam, Ikan, Telur, dll
+            string hargaText = txtSearch.Text.Trim();                // TextBox untuk filter harga
+
+            string query = "SELECT * FROM menu WHERE 1=1"; // Dasar query, 1=1 untuk mempermudah penambahan kondisi
+
+            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnStr))
+            using (MySqlCommand cmd = new MySqlCommand())
+            {
+                cmd.Connection = conn;
+
+                if (!string.IsNullOrEmpty(kategori))
+                {
+                    query += " AND nama_menu LIKE @kategori";
+                    cmd.Parameters.AddWithValue("@kategori", "%" + kategori + "%");
+                }
+
+                if (decimal.TryParse(hargaText, out decimal harga))
+                {
+                    query += " AND harga = @harga";
+                    cmd.Parameters.AddWithValue("@harga", harga);
+                }
+
+                query += " ORDER BY id_menu DESC"; // Urutkan data terbaru di atas
+                cmd.CommandText = query;
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvMenuCust.DataSource = dt;
+            }
+
+        }
     }
 }

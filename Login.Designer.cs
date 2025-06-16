@@ -43,7 +43,7 @@
             // 
             this.pictureBox1.Image = global::HoloSouls_PDKR_NSPD.Properties.Resources.Loginnn;
             this.pictureBox1.Location = new System.Drawing.Point(-3, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(705, 33);
             this.pictureBox1.TabIndex = 3;
@@ -67,7 +67,7 @@
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtPassword.Location = new System.Drawing.Point(209, 329);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(297, 22);
@@ -90,7 +90,7 @@
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtUsername.Location = new System.Drawing.Point(209, 268);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(297, 22);
             this.txtUsername.TabIndex = 9;
@@ -101,7 +101,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogin.Location = new System.Drawing.Point(287, 380);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(119, 32);
             this.btnLogin.TabIndex = 10;
@@ -140,7 +140,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::HoloSouls_PDKR_NSPD.Properties.Resources.Wp_logn;
-            this.ClientSize = new System.Drawing.Size(700, 514);
+            this.ClientSize = new System.Drawing.Size(702, 514);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
@@ -149,7 +149,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.labelSelmtSDtg);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Page";

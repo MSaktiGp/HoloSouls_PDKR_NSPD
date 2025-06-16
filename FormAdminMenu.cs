@@ -262,5 +262,10 @@ namespace HoloSouls_PDKR_NSPD
             this.Hide();
             frmAwalAdmin.Show();
         }
+
+        private void txtHarga_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

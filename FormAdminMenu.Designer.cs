@@ -42,15 +42,21 @@
             this.txtNama = new System.Windows.Forms.TextBox();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.txtHarga = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbFilterBy = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2NamaMenu
             // 
             this.label2NamaMenu.AutoSize = true;
             this.label2NamaMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2NamaMenu.Location = new System.Drawing.Point(65, 123);
+            this.label2NamaMenu.Location = new System.Drawing.Point(22, 34);
             this.label2NamaMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2NamaMenu.Name = "label2NamaMenu";
             this.label2NamaMenu.Size = new System.Drawing.Size(114, 20);
@@ -62,7 +68,7 @@
             // 
             this.label1Harga.AutoSize = true;
             this.label1Harga.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1Harga.Location = new System.Drawing.Point(65, 196);
+            this.label1Harga.Location = new System.Drawing.Point(23, 94);
             this.label1Harga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1Harga.Name = "label1Harga";
             this.label1Harga.Size = new System.Drawing.Size(68, 20);
@@ -103,7 +109,7 @@
             // 
             this.btnReload.BackColor = System.Drawing.Color.IndianRed;
             this.btnReload.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReload.Location = new System.Drawing.Point(391, 373);
+            this.btnReload.Location = new System.Drawing.Point(335, 418);
             this.btnReload.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(100, 28);
@@ -116,7 +122,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.IndianRed;
             this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClear.Location = new System.Drawing.Point(69, 409);
+            this.btnClear.Location = new System.Drawing.Point(13, 454);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(421, 38);
@@ -129,7 +135,7 @@
             // 
             this.btnCreate.BackColor = System.Drawing.Color.IndianRed;
             this.btnCreate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCreate.Location = new System.Drawing.Point(69, 373);
+            this.btnCreate.Location = new System.Drawing.Point(13, 418);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(100, 28);
@@ -142,7 +148,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.IndianRed;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.Location = new System.Drawing.Point(283, 373);
+            this.btnDelete.Location = new System.Drawing.Point(227, 418);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 28);
@@ -155,7 +161,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.IndianRed;
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdate.Location = new System.Drawing.Point(175, 373);
+            this.btnUpdate.Location = new System.Drawing.Point(119, 418);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 28);
@@ -169,7 +175,7 @@
             this.btnBack.BackColor = System.Drawing.Color.RosyBrown;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(744, 454);
+            this.btnBack.Location = new System.Drawing.Point(12, 8);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(151, 28);
@@ -180,9 +186,9 @@
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(69, 146);
+            this.txtNama.Location = new System.Drawing.Point(27, 57);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(421, 22);
+            this.txtNama.Size = new System.Drawing.Size(372, 22);
             this.txtNama.TabIndex = 23;
             this.txtNama.TextChanged += new System.EventHandler(this.txtNama_TextChanged);
             // 
@@ -190,7 +196,7 @@
             // 
             this.dgvMenu.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMenu.Location = new System.Drawing.Point(525, 66);
+            this.dgvMenu.Location = new System.Drawing.Point(452, 62);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowHeadersWidth = 57;
             this.dgvMenu.RowTemplate.Height = 24;
@@ -200,19 +206,63 @@
             // 
             // txtHarga
             // 
-            this.txtHarga.Location = new System.Drawing.Point(69, 228);
+            this.txtHarga.Location = new System.Drawing.Point(26, 129);
             this.txtHarga.Name = "txtHarga";
-            this.txtHarga.Size = new System.Drawing.Size(421, 22);
+            this.txtHarga.Size = new System.Drawing.Size(373, 22);
             this.txtHarga.TabIndex = 25;
+            this.txtHarga.TextChanged += new System.EventHandler(this.txtHarga_TextChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtHarga);
+            this.groupBox1.Controls.Add(this.label2NamaMenu);
+            this.groupBox1.Controls.Add(this.txtNama);
+            this.groupBox1.Controls.Add(this.label1Harga);
+            this.groupBox1.Location = new System.Drawing.Point(12, 89);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(418, 179);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Form Tambah";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.cmbFilterBy);
+            this.groupBox2.Location = new System.Drawing.Point(12, 274);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(418, 137);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Filter";
+            // 
+            // cmbFilterBy
+            // 
+            this.cmbFilterBy.FormattingEnabled = true;
+            this.cmbFilterBy.Items.AddRange(new object[] {
+            "Ayam",
+            "Ikan",
+            "Sapi",
+            "Cumi"});
+            this.cmbFilterBy.Location = new System.Drawing.Point(27, 31);
+            this.cmbFilterBy.Name = "cmbFilterBy";
+            this.cmbFilterBy.Size = new System.Drawing.Size(121, 24);
+            this.cmbFilterBy.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(166, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(233, 22);
+            this.textBox1.TabIndex = 28;
             // 
             // FormAdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 498);
-            this.Controls.Add(this.txtHarga);
+            this.ClientSize = new System.Drawing.Size(1081, 567);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvMenu);
-            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
@@ -221,14 +271,17 @@
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.label1Menu);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1Harga);
-            this.Controls.Add(this.label2NamaMenu);
+            this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdminMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.FormAdminMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +302,9 @@
         private System.Windows.Forms.TextBox txtNama;
         private System.Windows.Forms.DataGridView dgvMenu;
         private System.Windows.Forms.TextBox txtHarga;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cmbFilterBy;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
