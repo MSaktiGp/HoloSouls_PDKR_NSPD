@@ -88,7 +88,7 @@ namespace HoloSouls_PDKR_NSPD
        
         private void btnReload_Click(object sender, EventArgs e)
         {
-
+            LoadData();
         }
 
 
