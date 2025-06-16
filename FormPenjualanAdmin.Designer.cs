@@ -33,6 +33,7 @@
             this.dgvPenjualan = new System.Windows.Forms.DataGridView();
             this.btnCetak = new System.Windows.Forms.Button();
             this.label1DataPenjualan = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPenjualan)).BeginInit();
             this.SuspendLayout();
@@ -80,11 +81,25 @@
             this.label1DataPenjualan.TabIndex = 3;
             this.label1DataPenjualan.Text = "Data Penjualan";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(113, 23);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.Text = "Kembali";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FormPenjualanAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 516);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1DataPenjualan);
             this.Controls.Add(this.btnCetak);
             this.Controls.Add(this.dgvPenjualan);
@@ -104,5 +119,6 @@
         private System.Windows.Forms.DataGridView dgvPenjualan;
         private System.Windows.Forms.Button btnCetak;
         private System.Windows.Forms.Label label1DataPenjualan;
+        private System.Windows.Forms.Button btnBack;
     }
 }
