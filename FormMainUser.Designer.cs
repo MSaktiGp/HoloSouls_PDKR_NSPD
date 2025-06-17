@@ -48,7 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCari = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtHarga = new System.Windows.Forms.TextBox();
             this.cmbFilterBy = new System.Windows.Forms.ComboBox();
             this.txtMenu = new System.Windows.Forms.TextBox();
             this.btnTambah = new System.Windows.Forms.Button();
@@ -179,7 +179,7 @@
             this.numMenu.Location = new System.Drawing.Point(51, 300);
             this.numMenu.Margin = new System.Windows.Forms.Padding(4);
             this.numMenu.Name = "numMenu";
-            this.numMenu.Size = new System.Drawing.Size(338, 22);
+            this.numMenu.Size = new System.Drawing.Size(118, 22);
             this.numMenu.TabIndex = 18;
             this.numMenu.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
@@ -264,7 +264,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.btnCari);
-            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.txtHarga);
             this.groupBox1.Controls.Add(this.cmbFilterBy);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(549, 239);
@@ -284,12 +284,12 @@
             this.btnCari.UseVisualStyleBackColor = true;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
-            // txtSearch
+            // txtHarga
             // 
-            this.txtSearch.Location = new System.Drawing.Point(139, 33);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(203, 25);
-            this.txtSearch.TabIndex = 1;
+            this.txtHarga.Location = new System.Drawing.Point(139, 33);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.Size = new System.Drawing.Size(203, 25);
+            this.txtHarga.TabIndex = 1;
             // 
             // cmbFilterBy
             // 
@@ -327,8 +327,9 @@
             // 
             // dgvPesanan
             // 
+            this.dgvPesanan.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvPesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPesanan.Location = new System.Drawing.Point(47, 66);
+            this.dgvPesanan.Location = new System.Drawing.Point(51, 58);
             this.dgvPesanan.Name = "dgvPesanan";
             this.dgvPesanan.RowHeadersWidth = 57;
             this.dgvPesanan.RowTemplate.Height = 24;
@@ -452,7 +453,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnCari;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtHarga;
         private System.Windows.Forms.ComboBox cmbFilterBy;
         private System.Windows.Forms.TextBox txtMenu;
         private System.Windows.Forms.Button btnTambah;

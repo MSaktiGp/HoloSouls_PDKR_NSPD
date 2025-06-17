@@ -21,8 +21,7 @@ namespace HoloSouls_PDKR_NSPD
 
         private void btnCetak_Click(object sender, EventArgs e)
         {
-            FormReportPenjualan frmReport = new FormReportPenjualan();
-            frmReport.ShowDialog();
+           
         }
 
         private void loadData()

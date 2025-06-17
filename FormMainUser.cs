@@ -159,8 +159,8 @@ namespace HoloSouls_PDKR_NSPD
 
         private void TampilkanDataFiltered()
         {
-            string kategori = cmbFilterBy.SelectedItem?.ToString(); // ComboBox: Ayam, Ikan, Telur, dll
-            string hargaText = txtSearch.Text.Trim();                // TextBox untuk filter harga
+            string kategori = cmbFilterBy.SelectedItem?.ToString(); 
+            string hargaText = txtHarga.Text.Trim();                
 
             string query = "SELECT * FROM menu WHERE 1=1"; // Dasar query, 1=1 untuk mempermudah penambahan kondisi
 

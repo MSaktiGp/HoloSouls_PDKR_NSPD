@@ -14,6 +14,13 @@ namespace HoloSouls_PDKR_NSPD
     public partial class FormAdminMenu: Form
     {
         private int selectedId = -1;
+
+        int pageSize = 10;
+        int currentPage = 1;
+        int totalPages = 1;
+        int totalRecords = 0;
+
+        bool isFiltered = false; 
         public FormAdminMenu()
         {
             InitializeComponent();
@@ -88,7 +95,10 @@ namespace HoloSouls_PDKR_NSPD
        
         private void btnReload_Click(object sender, EventArgs e)
         {
-            LoadData();
+            currentPage = 1;
+            isFiltered = false;
+            TampilkanDataDefault();
+            MessageBox.Show("Berhasil Load Data");
         }
 
 
@@ -194,16 +204,15 @@ namespace HoloSouls_PDKR_NSPD
 
         private void FormAdminMenu_Load(object sender, EventArgs e)
         {
-
+            currentPage = 1;
+            isFiltered = false;
+            TampilkanDataDefault();
         }
 
         private void txtNama_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        
-
 
 
         private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -266,6 +275,139 @@ namespace HoloSouls_PDKR_NSPD
         private void txtHarga_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCariAdm_Click(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            isFiltered = true;
+            TampilkanDataFiltered();
+
+        }
+
+        private void TampilkanDataFiltered()
+        {
+            string kategori = cmbFilterBy.SelectedItem?.ToString();
+            string hargaText = txtHargaAdm.Text.Trim();
+
+            string query = "SELECT * FROM menu WHERE 1=1"; // Dasar query, 1=1 untuk mempermudah penambahan kondisi
+
+            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnStr))
+            using (MySqlCommand cmd = new MySqlCommand())
+            {
+                cmd.Connection = conn;
+
+                if (!string.IsNullOrEmpty(kategori))
+                {
+                    query += " AND nama_menu LIKE @kategori";
+                    cmd.Parameters.AddWithValue("@kategori", "%" + kategori + "%");
+                }
+
+                if (decimal.TryParse(hargaText, out decimal harga))
+                {
+                    query += " AND harga = @harga";
+                    cmd.Parameters.AddWithValue("@harga", harga);
+                }
+
+                query += " ORDER BY id_menu DESC"; // Urutkan data terbaru di atas
+                cmd.CommandText = query;
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvMenu.DataSource = dt;
+            }
+            
+            string kolomDb = "nama_menu";
+            string keyword = txtNama.Text.Trim();
+            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnStr))
+            {
+                conn.Open();
+
+                string countQuery = $"SELECT COUNT(*) FROM menu WHERE {kolomDb} LIKE @keyword";
+                MySqlCommand countCmd = new MySqlCommand(countQuery, conn); countCmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                totalRecords = Convert.ToInt32(countCmd.ExecuteScalar());
+
+                totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+                if (currentPage > totalPages) currentPage = totalPages;
+                if (currentPage < 1) currentPage = 1;
+
+                int offset = (currentPage - 1) * pageSize;
+
+                string query1 = $"SELECT id_menu, nama_menu, harga " +
+                $"FROM menu WHERE {kolomDb} LIKE @keyword ORDER BY id_menu DESC " +
+                $"LIMIT @limit OFFSET @offset";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                cmd.Parameters.AddWithValue("@limit", pageSize); 
+                cmd.Parameters.AddWithValue("@offset", offset);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvMenu.DataSource = dt;
+
+                lblPageInfo.Text = $"Halaman {currentPage} dari {totalPages}";
+            }
+
+        }
+
+        private void TampilkanDataDefault()
+        {
+            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnStr))
+            {
+                conn.Open();
+
+                // Hitung total data
+                string countQuery = "SELECT COUNT(*) FROM menu";
+                MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
+                totalRecords = Convert.ToInt32(countCmd.ExecuteScalar());
+
+                // Hitung total halaman
+                totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+                if (currentPage > totalPages) currentPage = totalPages;
+                if (currentPage < 1) currentPage = 1;
+
+                int offset = (currentPage - 1) * pageSize;
+
+                // Ambil data dari tabel menu
+                string query = "SELECT id_menu, nama_menu, harga " +
+                               "FROM menu ORDER BY id_menu DESC LIMIT @limit OFFSET @offset";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@limit", pageSize);
+                cmd.Parameters.AddWithValue("@offset", offset);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvMenu.DataSource = dt;
+
+                lblPageInfo.Text = $"Halaman {currentPage} dari {totalPages}";
+            }
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPages)
+            {
+                currentPage++;
+                if (isFiltered) TampilkanDataFiltered();
+                else TampilkanDataDefault();
+            }
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                if (isFiltered) TampilkanDataFiltered();
+                else TampilkanDataDefault();
+            }
         }
     }
 }
